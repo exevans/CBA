@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.0.2" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="20" tileheight="20" nextobjectid="12">
+ <tileset firstgid="1" name="MapTileSet" tilewidth="20" tileheight="20" tilecount="180" columns="10">
+  <image source="../Textures/Map/MapTileSet3.png" width="200" height="360"/>
+  <tile id="49">
+   <properties>
+    <property name="Collidable" type="bool" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="181" name="Floor_Lever_01" tilewidth="21" tileheight="21" tilecount="2" columns="2">
+  <image source="../Textures/WorldObjects/Floor_Lever_01.png" width="42" height="21"/>
+  <tile id="0">
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="10.5" width="21" height="10.5"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="183" name="Pressure_Plate_01" tilewidth="22" tileheight="22" tilecount="2" columns="2">
+  <image source="../Textures/WorldObjects/Pressure_Plate_01.png" width="44" height="22"/>
+ </tileset>
+ <tileset firstgid="185" name="Gate_01" tilewidth="30" tileheight="45" tilecount="1" columns="1">
+  <image source="../Textures/WorldObjects/Gate_01.png" width="30" height="45"/>
+ </tileset>
+ <tileset firstgid="186" name="Door_01" tilewidth="30" tileheight="60" tilecount="1" columns="1">
+  <image source="../Textures/WorldObjects/Door_01.png" width="30" height="60"/>
+ </tileset>
+ <tileset firstgid="187" name="spriteTest" tilewidth="31" tileheight="46" tilecount="1" columns="1">
+  <image source="../Textures/Characters/spriteTest.png" width="31" height="46"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="20" height="20">
+  <data encoding="csv">
+50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,
+50,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,50,
+50,109,109,50,50,109,109,109,109,109,109,109,109,109,109,148,148,109,109,50,
+50,109,109,50,50,109,109,109,109,109,109,109,109,109,139,50,50,137,109,50,
+50,109,109,109,109,109,109,109,109,109,109,109,109,109,109,128,128,109,109,50,
+50,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,50,
+50,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,50,
+50,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,50,
+50,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,50,
+50,109,109,109,109,109,109,109,60,109,109,60,60,60,109,109,109,109,109,50,
+50,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,50,
+50,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,50,
+50,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,50,
+50,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,50,
+50,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,50,
+50,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,50,
+50,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,50,
+50,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,50,
+50,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,109,50,
+50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50
+</data>
+ </layer>
+ <group name="Entities">
+  <objectgroup name="Entities">
+   <properties>
+    <property name="scriptPath" value=""/>
+    <property name="scriptTable" value=""/>
+   </properties>
+   <object id="2" gid="182" x="240" y="140" width="21" height="21">
+    <properties>
+     <property name="scriptPath" value="Assets/Scripts/Items.lua"/>
+     <property name="scriptTable" value="FloorLever"/>
+    </properties>
+   </object>
+   <object id="4" gid="183" x="140" y="140" width="20" height="20">
+    <properties>
+     <property name="scriptPath" value="Assets/Scripts/Items.lua"/>
+     <property name="scriptTable" value="PressurePlate"/>
+    </properties>
+   </object>
+   <object id="7" gid="186" x="60" y="210" width="30" height="60">
+    <properties>
+     <property name="destinationCellId" value="Green_01_01"/>
+     <property name="destinationTriggerId" type="int" value="0"/>
+     <property name="scriptPath" value="Assets/Scripts/Items.lua"/>
+     <property name="scriptTable" value="CellLoadTrigger"/>
+    </properties>
+   </object>
+   <object id="11" type="Entity" gid="181" x="80" y="300" width="21" height="21">
+    <properties>
+     <property name="scriptPath" value=""/>
+    </properties>
+   </object>
+   <object id="8" gid="187" x="125" y="185" width="31" height="46">
+    <properties>
+     <property name="scriptPath" value="Assets/Scripts/Characters.lua"/>
+     <property name="scriptTable" value="guard"/>
+    </properties>
+   </object>
+  </objectgroup>
+  <objectgroup name="hyer">
+   <object id="6" name="Gate" type="Entity" gid="185" x="180" y="220" width="30" height="45">
+    <properties>
+     <property name="scriptPath" value="Assets/Scripts/Items.lua"/>
+     <property name="scriptTable" value="Gate"/>
+    </properties>
+   </object>
+  </objectgroup>
+ </group>
+</map>

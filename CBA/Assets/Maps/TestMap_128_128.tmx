@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.0.3" orientation="orthogonal" renderorder="right-down" width="15" height="11" tilewidth="128" tileheight="128" nextobjectid="36">
+ <properties>
+  <property name="playerEntrance" type="int" value="9"/>
+ </properties>
+ <tileset firstgid="1" source="testTileset2.tsx"/>
+ <layer name="Tile Layer 1" width="15" height="11">
+  <data encoding="csv">
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+2,13,13,13,13,28,13,13,13,13,2,13,13,13,2,
+2,15,15,15,15,2,3,3,40,40,2,3,16,6,2,
+2,15,15,15,15,6,3,3,6,40,2,3,16,24,2,
+2,2,1,1,1,2,3,1,40,40,2,2,24,6,2,
+2,40,40,3,3,6,40,1,6,40,4,4,6,6,2,
+2,1,1,1,40,40,3,3,1,1,1,1,1,1,2,
+2,13,13,2,1,1,1,1,1,1,2,6,24,6,2,
+2,15,15,13,13,13,13,13,13,13,13,24,33,6,2,
+2,15,15,42,24,6,15,42,6,6,6,24,6,24,2,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2
+</data>
+ </layer>
+ <layer name="Tile Layer 2" width="15" height="11">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,1,1,0,0,1,0,
+30,0,0,0,0,0,0,0,0,0,37,0,0,0,37,
+30,10,11,11,12,32,10,32,32,32,37,39,32,32,37,
+30,19,20,20,21,0,19,20,0,0,37,41,0,0,37,
+30,1,0,0,0,0,2,0,19,0,37,30,0,23,37,
+30,10,29,11,11,0,23,0,0,19,0,0,19,21,37,
+0,0,0,30,41,29,29,12,29,29,32,32,0,0,37,
+30,0,0,37,0,1,0,1,0,1,30,10,32,32,37,
+30,39,32,0,0,0,0,0,0,0,0,41,0,0,37,
+30,41,0,32,32,32,32,32,32,32,32,0,0,0,37,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="Tile Layer 3" width="15" height="11">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,30,0,28,0,0,
+0,39,32,32,32,0,32,0,0,0,30,0,0,0,0,
+0,41,0,0,0,0,0,0,0,0,30,29,0,0,0,
+0,41,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,41,0,29,0,0,0,0,0,0,0,0,41,0,0,
+0,0,0,0,29,0,0,29,0,0,29,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,12,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="Collision" width="15" height="11" visible="0">
+  <data encoding="csv">
+38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
+38,38,38,38,38,0,38,38,38,38,38,38,0,38,38,
+38,0,0,0,0,0,0,0,0,0,38,0,0,0,38,
+38,0,0,0,0,0,0,0,0,0,38,0,0,0,38,
+38,0,0,0,0,0,0,0,0,0,38,38,0,0,38,
+38,0,0,0,0,0,0,0,0,0,38,38,0,0,38,
+38,38,38,38,0,0,0,0,0,0,0,0,0,0,38,
+38,38,38,38,38,38,38,38,38,38,38,0,0,0,38,
+38,0,0,38,38,38,38,38,38,38,38,0,0,0,38,
+38,0,0,0,0,0,0,0,0,0,0,0,0,0,38,
+38,38,38,38,38,38,38,38,38,38,38,38,38,38,38
+</data>
+ </layer>
+ <layer name="Lighting" width="15" height="11" visible="0">
+  <data encoding="csv">
+38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,
+38,0,0,0,0,0,0,0,0,0,38,0,0,0,38,
+38,0,0,0,0,0,0,0,0,0,38,0,0,0,38,
+38,0,0,0,0,38,0,0,38,0,38,0,0,0,38,
+38,0,0,0,0,0,0,0,0,0,38,38,0,0,38,
+38,0,0,0,0,38,0,0,38,0,38,38,0,0,38,
+38,38,38,38,0,0,0,0,0,0,0,0,0,0,38,
+38,0,0,38,38,38,38,38,38,38,38,0,0,0,38,
+38,0,0,0,0,0,0,0,0,0,0,0,0,0,38,
+38,0,0,0,0,0,0,0,0,0,0,0,0,0,38,
+38,38,38,38,38,38,38,38,38,38,38,38,38,38,38
+</data>
+ </layer>
+ <objectgroup name="Entities">
+  <object id="6" name="Elron" type="Entity" x="864" y="736" width="96" height="128">
+   <properties>
+    <property name="conversationId" type="int" value="0"/>
+    <property name="observationCallback" value="34 TriggerEntered onTriggerEntered"/>
+    <property name="scriptPath" value="Assets/Scripts/Characters.lua"/>
+    <property name="scriptTable" value="guard"/>
+   </properties>
+  </object>
+  <object id="8" name="Elron_Path" type="Route" x="384" y="386.286">
+   <properties>
+    <property name="ParentId" type="int" value="6"/>
+   </properties>
+   <polyline points="64,61.7143 -64,829.714 1216,829.714 1216,-66.2857 64,61.7143"/>
+  </object>
+  <object id="9" name="Door_Trigger" type="Entity" x="640" y="64" width="128" height="192">
+   <properties>
+    <property name="destinationCellId" value="Bench_00_00"/>
+    <property name="destinationEntId" type="int" value="2"/>
+    <property name="scriptPath" value="Assets/Scripts/Items.lua"/>
+    <property name="scriptTable" value="CellLoadTrigger"/>
+   </properties>
+  </object>
+  <object id="30" name="Door_Trigger" type="Entity" x="1536" y="64" width="128" height="192">
+   <properties>
+    <property name="destinationCellId" value="RobotCaves_00_00"/>
+    <property name="destinationEntId" type="int" value="6"/>
+    <property name="scriptPath" value="Assets/Scripts/Items.lua"/>
+    <property name="scriptTable" value="CellLoadTrigger"/>
+   </properties>
+  </object>
+  <object id="34" name="fleeTrigger" type="Entity" x="1280" y="768" width="128" height="128">
+   <properties>
+    <property name="scriptPath" value="Assets/Scripts/Items.lua"/>
+    <property name="scriptTable" value="Trigger"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Lights">
+  <object id="24" name="Light1" type="Light" x="1568" y="160" width="64" height="64">
+   <properties>
+    <property name="blue" type="int" value="0"/>
+    <property name="green" type="int" value="0"/>
+    <property name="radius" type="float" value="2"/>
+    <property name="red" type="int" value="255"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object id="25" name="Light2" type="Light" x="800" y="1056" width="64" height="64">
+   <properties>
+    <property name="blue" type="int" value="255"/>
+    <property name="green" type="int" value="0"/>
+    <property name="radius" type="float" value="4"/>
+    <property name="red" type="int" value="0"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object id="26" name="Light3" type="Light" x="832" y="544" width="64" height="64">
+   <properties>
+    <property name="blue" type="int" value="255"/>
+    <property name="green" type="int" value="255"/>
+    <property name="radius" type="float" value="3"/>
+    <property name="red" type="int" value="255"/>
+   </properties>
+   <ellipse/>
+  </object>
+ </objectgroup>
+</map>

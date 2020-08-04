@@ -1,0 +1,7 @@
+Texture Assets/SpriteSheets/PlayerSprite.png
+Size 33 27
+Scale 3.0 3.0
+/|Type|Name|StartFrame|EndFrame|Row|FrameTime|FrameActionStart|End|
+AnimationType Directional
+/Animation Idle 0 0 0 0.2 -1 -1
+Animation Walk 0 7 1 0.1 -1 -1

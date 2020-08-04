@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+
+<Cells>
+	<Cell CellID="Green_01_01">
+		<WorldObjects>
+			<Trigger fileID = "1" scriptPath = "Assets/Scripts/Items.lua" scriptTable = "CellLoadTrigger" positionX = "100" positionY = "50" destinationCellId = "Dungeon_01_01" destinationTriggerId="4" />
+			<Trigger fileID = "11" scriptPath = "Assets/Scripts/Items.lua" scriptTable = "CellLoadTrigger" positionX = "400" positionY = "550" destinationCellId = "Dungeon_01_01" destinationTriggerId="4" />
+		</WorldObjects> 
+	
+		<Characters>
+			<!--<Player scriptPath = "Assets/Scripts/Characters.lua" scriptTable = "player" positionX = "50" positionY = "50"/>-->
+			<npc fileID = "3" scriptPath = "Assets/Scripts/Characters.lua" scriptTable = "guard" positionX = "430" positionY = "320"/>
+			<kid fileID = "4" scriptPath = "Assets/Scripts/Characters.lua" scriptTable = "child" positionX = "50" positionY = "50"/>
+		</Characters>
+
+		<Items>
+			<HealthPotion fileID = "5" scriptPath = "Assets/Scripts/Items.lua" scriptTable = "HealthPotion" positionX = "10" positionY = "400"/>
+			<Sword fileID = "6" scriptPath = "Assets/Scripts/Items.lua" scriptTable = "Sword" positionX = "400" positionY = "100"/>
+			<!--<DamagePotion scriptPath = "Assets/Scripts/Items.lua"  -->
+			<Gun fileID = "7" scriptPath = "Assets/Scripts/Items.lua" scriptTable = "Gun" positionX = "150" positionY = "50"/>
+			<Chest fileID = "8" scriptPath = "Assets/Scripts/Items.lua" scriptTable = "Chest" positionX = "450" positionY = "200"/>
+			<plate fileID = "9" scriptPath = "Assets/Scripts/Items.lua" scriptTable = "PressurePlate" positionX = "600" positionY = "300"/>
+			<Rock fileID = "10" scriptPath = "Assets/Scripts/Items.lua" scriptTable = "Rock" positionX = "200" positionY = "200"/>
+		</Items>
+	</Cell>
+	<Cell CellID="Dungeon_01_01">
+		<WorldObjects>
+			<Trigger fileID = "4" scriptPath = "Assets/Scripts/Items.lua" scriptTable = "CellLoadTrigger" positionX = "200" positionY = "350" destinationCellId = "Green_01_01" destinationTriggerId="1"/>
+			<Gate fileID = "1" scriptPath = "Assets/Scripts/Items.lua" scriptTable = "Gate" positionX = "255" positionY = "450">
+			<Fields>
+				<Field Type = "Observing">
+					<Observee observeFileID = "3" />
+					<Observee observeFileID = "2" />
+					<Observee observeFileID = "8" />
+				</Field>
+			</Fields>
+			</Gate>
+			<plate fileID = "2" scriptPath = "Assets/Scripts/Items.lua" scriptTable = "PressurePlate" positionX = "250" positionY = "350"/>
+			<!--<lever fileID = "3" scriptPath = "Assets/Scripts/Items.lua" scriptTable = "FloorLever" positionX = "150" positionY = "250"/>-->
+			<lever fileID = "8" scriptPath = "Assets/Scripts/Items.lua" scriptTable = "FloorLever" positionX = "240" positionY = "490"/>
+		</WorldObjects> 
+	
+		<Characters>
+			<npc fileID = "5" scriptPath = "Assets/Scripts/Characters.lua" scriptTable = "npc" positionX = "100" positionY = "100"/>
+		</Characters>
+
+		<Items>
+			<Gun fileID = "6" scriptPath = "Assets/Scripts/Items.lua" scriptTable = "Gun" positionX = "200" positionY = "400"/>
+			<Chest fileID = "7" scriptPath = "Assets/Scripts/Items.lua" scriptTable = "Chest" positionX = "300" positionY = "350"/>
+			<Jug fileID = "9" scriptPath = "Assets/Scripts/Items.lua" scriptTable = "Jug" positionX = "300" positionY = "450" />
+		</Items>
+	</Cell>
+</Cells>

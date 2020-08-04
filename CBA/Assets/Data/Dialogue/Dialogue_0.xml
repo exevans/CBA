@@ -1,0 +1,540 @@
+<?xml version="1.0"?>
+
+<Conversations>
+	<Conversation ID="0" Description="first encounter with jane">
+		<DialogEntries>
+			<DialogEntry ID="0" IsRoot="true" IsEnd="false" QuestActivator="false" Conditional="false">
+				<Fields>
+					<Field Type="Text">
+						<DialogueText>Its you!, thank god, do you have the time to assist a little old woman?</DialogueText>
+						<Responses replyable="true">
+							<ResponseOption responseID="1" DestinationDialogID="1">sure, what's the problem?</ResponseOption>
+							<ResponseOption responseID="2" DestinationDialogID="5">Not right now.</ResponseOption>
+						</Responses>
+					</Field>
+				</Fields>
+				<OutgoingLinks>
+					<Link/>
+				</OutgoingLinks>
+			</DialogEntry>
+			<DialogEntry ID="1" IsRoot="false" IsEnd="false" QuestActivator="false" Conditional="false">
+				<Fields>
+					<Field Type="Text">
+						<DialogueText>Its my **** you see It was stolen from me</DialogueText>
+						<Responses replyable="true">
+							<ResponseOption responseID="1" DestinationDialogID="2">Killer robots?, are you sure?</ResponseOption>
+							<ResponseOption responseID="2" DestinationDialogID="3">Where did they take it?</ResponseOption>
+						</Responses>
+					</Field>
+				</Fields>
+				<OutgoingLinks>
+					<Link/>
+				</OutgoingLinks>
+			</DialogEntry>
+			<DialogEntry ID="2" IsRoot="false" IsEnd="false" QuestActivator="false" Conditional="false">
+				<Fields>
+					<Field Type="Text">
+						<DialogueText>I'm certain what do you take me for some fool?</DialogueText>
+						<Responses replyable="true">
+							<ResponseOption responseID="1" DestinationDialogID="1">Where am I?</ResponseOption>
+							<ResponseOption responseID="2" DestinationDialogID="3">Where did they take it?</ResponseOption>
+						</Responses>
+					</Field>
+				</Fields>
+				<OutgoingLinks>
+					<Link/>
+				</OutgoingLinks>
+			</DialogEntry>
+			<DialogEntry ID="3" IsRoot="false" IsEnd="false" QuestActivator="false" Conditional="false">
+				<Fields>
+					<Field Type="Text">
+						<DialogueText>The old treturus caves, its probably part of some devious plot, You have to stop them!</DialogueText>
+						<Responses replyable="true">
+							<ResponseOption responseID="1" DestinationDialogID="4">I'll have a look</ResponseOption>
+						</Responses>
+					</Field>
+				</Fields>
+				<OutgoingLinks>
+					<Link/>
+				</OutgoingLinks>
+			</DialogEntry>
+			<DialogEntry ID="4" IsRoot="false" IsEnd="true" QuestActivator="false" Conditional="false">
+				<Fields>
+					<Field Type="Text">
+						<DialogueText>Thankyou so much, they probably locked the door behind them, I'm hear elron has a spare key.</DialogueText>
+					</Field>
+				</Fields>
+				<OutgoingLinks>
+					<Link/>
+				</OutgoingLinks>
+			</DialogEntry>
+			<DialogEntry ID="5" IsRoot="false" IsEnd="true" QuestActivator="false" Conditional="false">
+				<Fields>
+					<Field Type="Text">
+						<DialogueText>Ok let me know if you have time later it's very urgent.</DialogueText>
+					</Field>
+				</Fields>
+				<OutgoingLinks>
+					<Link/>
+				</OutgoingLinks>
+			</DialogEntry>
+	</DialogEntries>
+	</Conversation>
+
+	<Conversation ID="1" Description="talk with elron">
+		<Description>The test conversation</Description>
+		<DialogEntries>
+			<DialogEntry ID="0" IsRoot="true" IsEnd="false" QuestActivator="false" Conditional="true">
+				<Fields>
+					<Field Type="Text">
+						<DialogueText>How are things going Desmond?</DialogueText>
+						<Responses replyable="true">
+							<ResponseOption responseID="1" DestinationDialogID="1">you dont have a key to the caves do you?</ResponseOption>
+							<ResponseOption responseID="2" DestinationDialogID="3">No Not Right Now</ResponseOption>
+						</Responses>
+					</Field>
+					<Field Type="Conditions">
+						<Condition ConditionType="QuestNotStarted">
+							<Quest ID="1" Stage="0" />
+						</Condition>
+					</Field>
+				</Fields>
+				<OutgoingLinks>
+					<Link/>
+				</OutgoingLinks>
+			</DialogEntry>
+			<DialogEntry ID="1" IsRoot="false" IsEnd="false" QuestActivator="false">
+				<Fields>
+					<Field Type="Text">
+						<DialogueText> I believe I do, ahh yes here it is </DialogueText>
+						<Responses replyable="true">
+							<ResponseOption responseID="1" DestinationDialogID="2">Sure I'll be right back</ResponseOption>
+							<ResponseOption responseID="2" DestinationDialogID="3">Nope</ResponseOption>
+							<ResponseOption responseID="3" DestinationDialogID="4">Only if you pay me</ResponseOption>
+						</Responses>
+					</Field>
+				</Fields>
+				<OutgoingLinks>
+					<Link/>
+				</OutgoingLinks>
+			</DialogEntry>
+			<DialogEntry ID="2" IsRoot="false" IsEnd="true" QuestActivator="true">
+				<Fields>
+					<Field Type="Text">
+						<DialogueText>Excellent thanks </DialogueText>
+						<Responses replyable="true">
+							<ResponseOption responseID="1">Bye</ResponseOption>
+						</Responses>
+					</Field>
+				</Fields>
+				<OutgoingLinks>
+					<Link ActivatedQuestID="1" />
+				</OutgoingLinks>
+			</DialogEntry>
+			<DialogEntry ID="3" IsRoot="false" IsEnd="true" QuestActivator="false">
+				<Fields>
+					<Field Type="Text">
+						<DialogueText>Oh okay then bye</DialogueText>
+						<Responses replyable="false" />
+					</Field>
+				</Fields>
+				<OutgoingLinks>
+					<Link/>
+				</OutgoingLinks>
+			</DialogEntry>
+			<DialogEntry ID="4" IsRoot="false" IsEnd="true" QuestActivator="false">
+				<Fields>
+					<Field Type="Text">
+						<DialogueText>Absolutly not Go Away!</DialogueText>
+						<Responses replyable="false" />
+					</Field>
+				</Fields>
+				<OutgoingLinks>
+					<Link/>
+				</OutgoingLinks>
+			</DialogEntry>
+			<DialogEntry ID="5" IsRoot="false" IsEnd="true" QuestActivator="false" QuestUpdater="true" ActionRequired="true">
+				<Fields>
+					<Field Type="Text">
+						<DialogueText>You found my jug thank-you so much</DialogueText>
+						<Responses replyable="true">
+							<ResponseOption responseID="1" DestinationDialogID="1">No problem</ResponseOption>
+						</Responses>
+					</Field>
+					<Field Type="Quest">
+						<NextQuestID>1</NextQuestID>
+						<NextQuestStage>2</NextQuestStage>
+					</Field>
+					<Field Type="Conditions">
+						<Condition ConditionType="QuestReached">
+							<Quest ID="1" Stage="1" />
+						</Condition>
+					</Field>
+					<Field Type="Action">
+						<Action ActionType="RemoveItemFromInventory" ItemTypeID="_Item_Jug_small_01"/>
+					</Field>
+				</Fields>
+				<OutgoingLinks>
+					<Link/>
+				</OutgoingLinks>
+			</DialogEntry>
+			<DialogEntry ID="6" IsRoot="true" IsEnd="false" QuestActivator="false" Conditional="true" QuestUpdater="false">
+				<Fields>
+					<Field Type="Text">
+						<DialogueText>Have You found my jug yet?</DialogueText>
+						<Responses replyable="true">
+							<ResponseOption responseID="1" DestinationDialogID="5" Conditional="true">Yes Here it is
+								<Fields>
+									<Field Type="Conditions">
+										<Condition ConditionType="QuestReached">
+											<Quest ID="1" Stage="0"/>
+										</Condition>
+										<Condition ConditionType="ItemInInventory">
+											<Item ID="_Item_Jug_small_01"/>
+										</Condition>
+									</Field>
+								</Fields>
+							</ResponseOption>
+							<ResponseOption responseID="2" DestinationDialogID="3">Sorry not yet still looking</ResponseOption>
+						</Responses>
+					</Field>
+					<Field Type="Conditions">
+						<Condition ConditionType="QuestReached">
+							<Quest ID="1" Stage="0" />
+						</Condition>
+						<Condition ConditionType="QuestNotFinished">
+							<Quest ID="1"/>
+						</Condition>
+					</Field>
+				</Fields>
+				<OutgoingLinks>
+					<Link/>
+				</OutgoingLinks>
+			</DialogEntry>
+			<DialogEntry ID="7" IsRoot="true" IsEnd="true" QuestActivator="false" Conditional="true" QuestUpdater="false">
+				<Fields>
+					<Field Type="Text">
+						<DialogueText>Your my hero is there anything I can do for you? </DialogueText>
+						<Responses replyable="true">
+							<ResponseOption responseID="1" DestinationDialogID="1">Nothing at the moment </ResponseOption>
+						</Responses>
+					</Field>
+					<Field Type="Conditions">
+						<Condition ConditionType="QuestFinished">
+							<Quest ID="1" />
+						</Condition>
+					</Field>
+				</Fields>
+				<OutgoingLinks>
+					<Link/>
+				</OutgoingLinks>
+			</DialogEntry>
+		</DialogEntries>
+	</Conversation>
+	<Conversation ID="2">
+		<DialogEntries>
+			<DialogEntry ID="0" IsRoot="true" IsEnd="false" QuestActivator="false" Conditional="true">
+				<Fields>
+					<Field Type="Text">
+						<DialogueText>Yes?</DialogueText>
+						<Responses replyable="true">
+							<ResponseOption responseID="1" DestinationDialogID="1" Conditional="true">Have you seen Bills jug?
+								<Fields>
+									<Field Type="Conditions">
+										<Condition ConditionType="QuestReached">
+											<Quest ID="1" Stage="0"/>
+										</Condition>
+										<Condition ConditionType="QuestNotReached">
+											<Quest ID="1" Stage="1"/>
+										</Condition>
+									</Field>
+								</Fields>
+							</ResponseOption>
+							<ResponseOption responseID="2" DestinationDialogID="2">Nothing Right Now</ResponseOption>
+						</Responses>
+					</Field>
+					<Field Type="Conditions">
+						<Condition ConditionType="QuestReached">
+							<Quest ID="1" Stage="0" />
+						</Condition>
+						<Condition ConditionType="QuestNotReached">
+							<Quest ID="1" Stage="1" />
+						</Condition>
+					</Field>
+				</Fields>
+			</DialogEntry>
+			<DialogEntry ID="1" IsRoot="false" IsEnd="True" QuestActivator="false" QuestUpdater="true" ActionRequired="true">
+				<Fields>
+					<Field Type="Text">
+						<DialogueText>Ahh yes here it is, I'll give it to you</DialogueText>
+						<Responses replyable="true">
+							<ResponseOption responseID="1">Thanks</ResponseOption>
+						</Responses>
+					</Field>
+					<Field Type="Quest">
+						<NextQuestID>1</NextQuestID>
+						<NextQuestStage>1</NextQuestStage>
+					</Field>
+					<Field Type="Action">
+						<Action ActionType="AddItemToInventory" ItemTypeID="Jug"/>
+					</Field>
+				</Fields>
+			</DialogEntry>
+			<DialogEntry ID="2" ConversationID="2" IsRoot="false" IsEnd="True" QuestActivator="false">
+				<Fields>
+					<Field Type="Text">
+						<DialogueText>Okay bye</DialogueText>
+						<Responses replyable="true">
+							<ResponseOption responseID="1">Bye</ResponseOption>
+						</Responses>
+					</Field>
+				</Fields>
+			</DialogEntry>
+		</DialogEntries>
+	</Conversation>
+
+	<Conversation ID="3">
+		<DialogEntries>
+			<DialogEntry ID="0" IsRoot="true" IsEnd="false" QuestActivator="false" Conditional="true">
+				<Fields>
+					<Field Type="Text">
+						<DialogueText>Excuse me mister you haven't seen a health potion have you?</DialogueText>
+						<Responses replyable="true">
+							<ResponseOption responseID="1" DestinationDialogID="1">No, but I'll look for it</ResponseOption>
+							<ResponseOption responseID="2" DestinationDialogID="2" Conditional="true">Is this it here?
+								<Fields>
+									<Field Type="Conditions">
+										<Condition ConditionType="ItemInInventory">
+											<Item ID="_Ptn_hlth_small"/>
+										</Condition>
+									</Field>
+								</Fields>
+							</ResponseOption>
+							<ResponseOption responseID="3" DestinationDialogID="3">No Not Right Now</ResponseOption>
+						</Responses>
+					</Field>
+					<Field Type="Conditions">
+						<Condition ConditionType="QuestNotReached">
+							<Quest ID="2" Stage="2"/>
+						</Condition>
+					</Field>
+				</Fields>
+				<OutgoingLinks>
+					<Link/>
+				</OutgoingLinks>
+			</DialogEntry>
+			<DialogEntry ID="1" ConversationID="3" IsRoot="false" IsEnd="true" QuestActivator="true">
+				<Fields>
+					<Field Type="Text">
+						<DialogueText>Thanks let me know if you find it</DialogueText>
+					</Field>
+				</Fields>
+				<OutgoingLinks>
+					<Link ActivatedQuestID="2" />
+				</OutgoingLinks>
+			</DialogEntry>
+			<DialogEntry ID="2" ConversationID="3" IsRoot="false" IsEnd="true" QuestActivator="false" QuestUpdater="true" ActionRequired="true">
+				<Fields>
+					<Field Type="Text">
+						<DialogueText>Perfect thankyou!</DialogueText>
+					</Field>
+					<Field Type="Quest">
+						<NextQuestID>2</NextQuestID>
+						<NextQuestStage>2</NextQuestStage>
+					</Field>
+					<Field Type="Action">
+						<Action ActionType="RemoveItemFromInventory" ItemTypeID="_Ptn_hlth_small"/>
+					</Field>
+				</Fields>
+				<OutgoingLinks>
+					<Link ActivatedQuestID="2" />
+				</OutgoingLinks>
+			</DialogEntry>
+			<DialogEntry ID="3" ConversationID="3" IsRoot="false" IsEnd="true" QuestActivator="false">
+				<Fields>
+					<Field Type="Text">
+						<DialogueText>Okay no problem</DialogueText>
+					</Field>
+				</Fields>
+				<OutgoingLinks>
+					<Link ActivatedQuestID="2" />
+				</OutgoingLinks>
+			</DialogEntry>
+			<DialogEntry ID="4" ConversationID="3" IsRoot="true" IsEnd="true" QuestActivator="false" Conditional="false">
+				<Fields>
+					<Field Type="Text">
+						<DialogueText>Cheers for finding my potion</DialogueText>
+					</Field>
+				</Fields>
+				<OutgoingLinks>
+					<Link />
+				</OutgoingLinks>
+			</DialogEntry>
+		</DialogEntries>
+	</Conversation>
+
+	<Conversation ID="4">
+		<DialogEntries>
+			<DialogEntry ID="0" IsRoot="true" IsEnd="false" QuestActivator="false">
+				<Fields>
+					<Field Type="Text">
+						<DialogueText>Hello, I do not believe we've met before, Who might you be?</DialogueText>
+						<Responses replyable="true">
+							<ResponseOption responseID="1" DestinationDialogID="1">I'm [name].</ResponseOption>
+							<ResponseOption responseID="2" DestinationDialogID="2">That's none of your business.</ResponseOption>
+						</Responses>
+					</Field>
+				</Fields>
+				<OutgoingLinks>
+					<Link/>
+				</OutgoingLinks>
+			</DialogEntry>
+			<DialogEntry ID="1" IsRoot="false" IsEnd="false" QuestActivator="false">
+				<Fields>
+					<Field Type="Text">
+						<DialogueText>Well nice to meet you [name], What can I do for you?</DialogueText>
+						<Responses replyable="true">
+							<ResponseOption responseID="1" DestinationDialogID="3">What is this place?</ResponseOption>
+							<ResponseOption responseID="2" DestinationDialogID="5">Who are you?</ResponseOption>
+							<ResponseOption responseID="3" DestinationDialogID="6">I should go.</ResponseOption>
+						</Responses>
+					</Field>
+				</Fields>
+				<OutgoingLinks>
+					<Link/>
+				</OutgoingLinks>
+			</DialogEntry>
+			<DialogEntry ID="2" IsRoot="false" IsEnd="false" QuestActivator="false">
+				<Fields>
+					<Field Type="Text">
+						<DialogueText>Sorry, I didn't mean to intrude. </DialogueText>
+						<Responses replyable="true">
+							<ResponseOption responseID="1" DestinationDialogID="1">...</ResponseOption>
+						</Responses>
+					</Field>
+				</Fields>
+				<OutgoingLinks>
+					<Link/>
+				</OutgoingLinks>
+			</DialogEntry>
+			<DialogEntry ID="3" IsRoot="false" IsEnd="false" QuestActivator="false">
+				<Fields>
+					<Field Type="Text">
+						<DialogueText>You don't know?, thats a new one.</DialogueText>
+						<Responses replyable="true">
+							<ResponseOption responseID="1" DestinationDialogID="4">I don't remember much since waking up.</ResponseOption>
+							<ResponseOption responseID="2" DestinationDialogID="4">Blatently not, otherwise I wouldn't be asking.</ResponseOption>
+						</Responses>
+					</Field>
+				</Fields>
+				<OutgoingLinks>
+					<Link/>
+				</OutgoingLinks>
+			</DialogEntry>
+			<DialogEntry ID="4" IsRoot="false" IsEnd="false" QuestActivator="false">
+				<Fields>
+					<Field Type="Text">
+						<DialogueText>Well, your in Elysium Plains child. It's a lovely place.</DialogueText>
+						<Responses replyable="true">
+							<ResponseOption responseID="1" DestinationDialogID="1">...</ResponseOption>
+						</Responses>
+					</Field>
+				</Fields>
+				<OutgoingLinks>
+					<Link/>
+				</OutgoingLinks>
+			</DialogEntry>
+			<DialogEntry ID="5" IsRoot="false" IsEnd="false" QuestActivator="false">
+				<Fields>
+					<Field Type="Text">
+						<DialogueText>I'm Elron Barnes.</DialogueText>
+						<Responses replyable="true">
+							<ResponseOption responseID="1" DestinationDialogID="1">...</ResponseOption>
+						</Responses>
+					</Field>
+				</Fields>
+				<OutgoingLinks>
+					<Link/>
+				</OutgoingLinks>
+			</DialogEntry>
+			<DialogEntry ID="6" IsRoot="false" IsEnd="true" QuestActivator="false">
+				<Fields>
+					<Field Type="Text">
+						<DialogueText>Okay no problem, bye</DialogueText>
+					</Field>
+				</Fields>
+				<OutgoingLinks>
+					<Link/>
+				</OutgoingLinks>
+			</DialogEntry>
+		</DialogEntries>
+	</Conversation>	
+	
+	<Conversation ID="100" Description="final encounter with elron">
+		<DialogEntries>
+			<DialogEntry ID="0" IsRoot="true" IsEnd="false" QuestActivator="false" Conditional="false">
+				<Fields>
+					<Field Type="Text">
+						<DialogueText>Are you sure you want this?.</DialogueText>
+						<Responses replyable="true">
+							<ResponseOption responseID="1" DestinationDialogID="1">Yes, I want to go back</ResponseOption>
+						</Responses>
+					</Field>
+				</Fields>
+				<OutgoingLinks>
+					<Link/>
+				</OutgoingLinks>
+			</DialogEntry>
+			<DialogEntry ID="1" IsRoot="false" IsEnd="false" QuestActivator="false" Conditional="false">
+				<Fields>
+					<Field Type="Text">
+						<DialogueText>Remember I can't send you back to your life before you came here, but I can send you to an alternate plain</DialogueText>
+						<Responses replyable="true">
+							<ResponseOption responseID="1" DestinationDialogID="2">I just want a chance to start again somewhere free from the past.</ResponseOption>
+						</Responses>
+					</Field>
+				</Fields>
+				<OutgoingLinks>
+					<Link/>
+				</OutgoingLinks>
+			</DialogEntry>
+			<DialogEntry ID="2" IsRoot="false" IsEnd="false" QuestActivator="false" Conditional="false">
+				<Fields>
+					<Field Type="Text">
+						<DialogueText>I can wipe your memory, all that you'll remember will be your name.</DialogueText>
+						<Responses replyable="true">
+							<ResponseOption responseID="1" DestinationDialogID="3">Ok.</ResponseOption>
+							<ResponseOption responseID="2" DestinationDialogID="3">Thank you elron, for everything.</ResponseOption>
+						</Responses>
+					</Field>
+				</Fields>
+				<OutgoingLinks>
+					<Link/>
+				</OutgoingLinks>
+			</DialogEntry>
+			<DialogEntry ID="3" IsRoot="false" IsEnd="false" QuestActivator="false" Conditional="false">
+				<Fields>
+					<Field Type="Text">
+						<DialogueText>Thats why I'm here, I hope you get what you want.</DialogueText>
+						<Responses replyable="true">
+							<ResponseOption responseID="1" DestinationDialogID="4">So do I.</ResponseOption>
+						</Responses>
+					</Field>
+				</Fields>
+				<OutgoingLinks>
+					<Link/>
+				</OutgoingLinks>
+			</DialogEntry>
+			<DialogEntry ID="4" IsRoot="false" IsEnd="true" QuestActivator="false" Conditional="false">
+				<Fields>
+					<Field Type="Text">
+						<DialogueText>Okay, climb in the tube, and then it's goodbye</DialogueText>
+					</Field>
+				</Fields>
+				<OutgoingLinks>
+					<Link/>
+				</OutgoingLinks>
+			</DialogEntry>
+	</DialogEntries>
+	</Conversation>
+</Conversations>

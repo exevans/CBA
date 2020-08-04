@@ -1,0 +1,70 @@
+<Quests>
+	<Quest ID="0" Activated="false" Finished="false" CurrentStage="0" QuestTitle="Address Unknown">
+		<QuestStages>
+			<QuestStage StageID="0" QuestID="0" IsRoot="true" IsEnd="false">
+				<Fields>
+					<Field Type="Text">
+						<Objective>Find a way out of the cave</Objective>
+					</Field>
+				</Fields>
+			</QuestStage>
+			<QuestStage StageID="1" QuestID="0" IsRoot="false" IsEnd="true">
+				<Fields>
+					<Field Type="Text">
+						<Objective>Quest Completed</Objective>
+					</Field>
+				</Fields>
+			</QuestStage>
+		</QuestStages>
+	</Quest>
+	<Quest ID="1" Activated="false" Finished="false" CurrentStage="0" QuestTitle="An Empty Jug">
+		<QuestStages>
+			<QuestStage StageID="0" QuestID="1" IsRoot="true" IsEnd="false">
+				<Fields>
+					<Field Type="Text">
+						<Objective>Ask the town folk about Bills lost Jug</Objective>
+					</Field>
+				</Fields>
+			</QuestStage>
+			<QuestStage StageID="1" QuestID="1" IsRoot="false" IsEnd="false">
+				<Fields>
+					<Field Type="Text">
+						<Objective>Return the jug to bill</Objective>
+					</Field>
+				</Fields>
+			</QuestStage>
+			<QuestStage StageID="2" QuestID="1" IsRoot="false" IsEnd="true">
+				<Fields>
+					<Field Type="Text">
+						<Objective>Quest Completed</Objective>
+					</Field>
+				</Fields>
+			</QuestStage>
+		</QuestStages>
+	</Quest>
+	<Quest ID="2" Activated="false" Finished="false" CurrentStage="0" QuestTitle="Timmy's potion">
+		<QuestStages>
+			<QuestStage StageID="0" QuestID="1" IsRoot="true" IsEnd="false">
+				<Fields>
+					<Field Type="Text">
+						<Objective>Find Timmys health potion</Objective>
+					</Field>
+				</Fields>
+			</QuestStage>
+			<QuestStage StageID="1" QuestID="1" IsRoot="false" IsEnd="false">
+				<Fields>
+					<Field Type="Text">
+						<Objective>Return Timmys health potion</Objective>
+					</Field>
+				</Fields>
+			</QuestStage>
+			<QuestStage StageID="2" QuestID="1" IsRoot="false" IsEnd="true">
+				<Fields>
+					<Field Type="Text">
+						<Objective>Quest Completed</Objective>
+					</Field>
+				</Fields>
+			</QuestStage>
+		</QuestStages>
+	</Quest>
+</Quests>

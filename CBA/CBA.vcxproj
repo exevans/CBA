@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0FDD6576-0B71-47FD-90C9-850BC4941926}</ProjectGuid>
+    <RootNamespace>CBA</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(USERPROFILE)\Desktop\VS17\sfml-2.4.2-vs2017\include;$(USERPROFILE)\Desktop\LuaBridge-master\Source\LuaBridge;$(USERPROFILE)\Desktop\VS17\pugi_xml;$(USERPROFILE)\Desktop\VS17\imgui-master;C:\Users\Elliot\Desktop\VS17\imgui-sfml-master;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>C:\Users\Elliot\Desktop\sfml%2832%29\include;C:\Users\Elliot\Desktop\lua-5.2_Win32_dll6_lib\include;C:\Users\Elliot\Desktop\LuaBridge-master\Source\LuaBridge;C:\Users\Elliot\Desktop\SFGUI-0.3.0\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Elliot\Desktop\sfml%2832%29\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(USERPROFILE)\Desktop\VS17\LUA\5.3.4\include;$(USERPROFILE)\Desktop\VS17\Sol;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>sfml-network-d.lib;sfml-audio-d.lib;sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;lua5.3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>$(USERPROFILE)\Desktop\VS17\sfml-2.4.2-vs2017\lib;$(USERPROFILE)\Desktop\VS17\LUA\5.3.4\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Users\Elliot\Desktop\SFML-2.4.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>sfml-network.lib;sfml-audio.lib;sfml-graphics.lib;sfml-window.lib;sfml-system.lib;lua52.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>C:\Users\Elliot\Desktop\VS17\sfml-2.4.2-vs2017\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Link>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Link>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Animation.cpp" />
+    <ClCompile Include="AnimationSystem.cpp" />
+    <ClCompile Include="Anim_Dir.cpp" />
+    <ClCompile Include="CollisionSystem.cpp" />
+    <ClCompile Include="Communicator.cpp" />
+    <ClCompile Include="Component.cpp" />
+    <ClCompile Include="DialogueManager.cpp" />
+    <ClCompile Include="Engine.cpp" />
+    <ClCompile Include="EntityManager.cpp" />
+    <ClCompile Include="EventManager.cpp" />
+    <ClCompile Include="FontManager.cpp" />
+    <ClCompile Include="GameLogic.cpp" />
+    <ClCompile Include="GameManager.cpp" />
+    <ClCompile Include="GraphicsSystem.cpp" />
+    <ClCompile Include="InputSystem.cpp" />
+    <ClCompile Include="InteractSystem.cpp" />
+    <ClCompile Include="KeyBindings.cpp" />
+    <ClCompile Include="LightingSystem.cpp" />
+    <ClCompile Include="LightManager.cpp" />
+    <ClCompile Include="LuaEntityHandle.cpp" />
+    <ClCompile Include="LuaManager.cpp" />
+    <ClCompile Include="LuaWorldHandle.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MapManager.cpp" />
+    <ClCompile Include="MovementSystem.cpp" />
+    <ClCompile Include="NavMeshManager.cpp" />
+    <ClCompile Include="NavMeshSystem.cpp" />
+    <ClCompile Include="Observer.cpp" />
+    <ClCompile Include="pugixml.cpp" />
+    <ClCompile Include="QuestManager.cpp" />
+    <ClCompile Include="ScheduleSystem.cpp" />
+    <ClCompile Include="ScriptStateManagerSystem.cpp" />
+    <ClCompile Include="ShaderManager.cpp" />
+    <ClCompile Include="MessageHandler.cpp" />
+    <ClCompile Include="SpriteSheet.cpp" />
+    <ClCompile Include="StateManager.cpp" />
+    <ClCompile Include="State_Dialogue.cpp" />
+    <ClCompile Include="State_Game.cpp" />
+    <ClCompile Include="State_Intro.cpp" />
+    <ClCompile Include="State_MainMenu.cpp" />
+    <ClCompile Include="State_OptionsMenu.cpp" />
+    <ClCompile Include="State_Paused.cpp" />
+    <ClCompile Include="Subject.cpp" />
+    <ClCompile Include="System.cpp" />
+    <ClCompile Include="SystemManager.cpp" />
+    <ClCompile Include="TextManager.cpp" />
+    <ClCompile Include="TextureManager.cpp" />
+    <ClCompile Include="TimerSystem.cpp" />
+    <ClCompile Include="Window.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Animation.h" />
+    <ClInclude Include="AnimationSystem.h" />
+    <ClInclude Include="Anim_Dir.h" />
+    <ClInclude Include="CollisionSystem.h" />
+    <ClInclude Include="Communicator.h" />
+    <ClInclude Include="Component.h" />
+    <ClInclude Include="ComponentType.h" />
+    <ClInclude Include="DialogueManager.h" />
+    <ClInclude Include="Direction.h" />
+    <ClInclude Include="Engine.h" />
+    <ClInclude Include="EntityEvent.h" />
+    <ClInclude Include="EntityManager.h" />
+    <ClInclude Include="EntityMessage.h" />
+    <ClInclude Include="EventManager.h" />
+    <ClInclude Include="EventQueue.h" />
+    <ClInclude Include="EventType.h" />
+    <ClInclude Include="FontManager.h" />
+    <ClInclude Include="GameLogic.h" />
+    <ClInclude Include="GameManager.h" />
+    <ClInclude Include="GraphicsSystem.h" />
+    <ClInclude Include="InputSystem.h" />
+    <ClInclude Include="InteractSystem.h" />
+    <ClInclude Include="KeyBinding.h" />
+    <ClInclude Include="LightingSystem.h" />
+    <ClInclude Include="LightManager.h" />
+    <ClInclude Include="LuaEntityHandle.h" />
+    <ClInclude Include="LuaManager.h" />
+    <ClInclude Include="LuaWorldHandle.h" />
+    <ClInclude Include="MapManager.h" />
+    <ClInclude Include="Message.h" />
+    <ClInclude Include="MessageHandler.h" />
+    <ClInclude Include="MovementSystem.h" />
+    <ClInclude Include="NavMeshManager.h" />
+    <ClInclude Include="NavMeshSystem.h" />
+    <ClInclude Include="Observer.h" />
+    <ClInclude Include="QuestManager.h" />
+    <ClInclude Include="ScheduleSystem.h" />
+    <ClInclude Include="ScheduleTasks.h" />
+    <ClInclude Include="ScriptStateManagerSystem.h" />
+    <ClInclude Include="ShaderManager.h" />
+    <ClInclude Include="SharedContext.h" />
+    <ClInclude Include="TextManager.h" />
+    <ClInclude Include="SpriteSheet.h" />
+    <ClInclude Include="State.h" />
+    <ClInclude Include="StateManager.h" />
+    <ClInclude Include="StateType.h" />
+    <ClInclude Include="State_Dialogue.h" />
+    <ClInclude Include="State_Game.h" />
+    <ClInclude Include="State_Intro.h" />
+    <ClInclude Include="State_MainMenu.h" />
+    <ClInclude Include="State_OptionsMenu.h" />
+    <ClInclude Include="State_Paused.h" />
+    <ClInclude Include="Subject.h" />
+    <ClInclude Include="System.h" />
+    <ClInclude Include="SystemManager.h" />
+    <ClInclude Include="SystemType.h" />
+    <ClInclude Include="TextureManager.h" />
+    <ClInclude Include="TimerSystem.h" />
+    <ClInclude Include="Window.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

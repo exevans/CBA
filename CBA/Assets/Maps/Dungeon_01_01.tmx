@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="15" tilewidth="20" tileheight="20" nextobjectid="37">
+ <tileset firstgid="1" name="MapTileSet" tilewidth="20" tileheight="20" tilecount="180" columns="10">
+  <image source="../Textures/Map/MapTileSet3.png" width="200" height="360"/>
+  <tile id="19">
+   <properties>
+    <property name="Collidable" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="49">
+   <properties>
+    <property name="Collidable" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="92">
+   <properties>
+    <property name="Collidable" type="bool" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="181" name="Floor_Lever_01" tilewidth="21" tileheight="21" tilecount="2" columns="2">
+  <image source="../Textures/WorldObjects/Floor_Lever_01.png" width="42" height="21"/>
+ </tileset>
+ <tileset firstgid="183" name="Gate_01" tilewidth="30" tileheight="45" tilecount="1" columns="1">
+  <image source="../Textures/WorldObjects/Gate_01.png" width="30" height="45"/>
+ </tileset>
+ <tileset firstgid="184" name="Door_01" tilewidth="30" tileheight="60" tilecount="1" columns="1">
+  <image source="../Textures/WorldObjects/Door_01.png" width="30" height="60"/>
+ </tileset>
+ <tileset firstgid="185" name="_Char_npc_01" tilewidth="31" tileheight="46" tilecount="1" columns="1">
+  <image source="../Textures/Characters/spriteTest.png" width="31" height="46"/>
+ </tileset>
+ <tileset firstgid="186" name="HealthPotion_01" tilewidth="20" tileheight="20" tilecount="1" columns="1">
+  <image source="../Textures/Items/HealthPotion_01.png" width="20" height="25"/>
+ </tileset>
+ <tileset firstgid="187" name="PlayerSprite" tilewidth="33" tileheight="27" tilecount="240" columns="8">
+  <image source="../Textures/Characters/PlayerSprite.png" width="264" height="810"/>
+  <tile id="15">
+   <animation>
+    <frame tileid="8" duration="100"/>
+    <frame tileid="9" duration="100"/>
+    <frame tileid="10" duration="100"/>
+    <frame tileid="11" duration="100"/>
+    <frame tileid="12" duration="100"/>
+    <frame tileid="13" duration="100"/>
+    <frame tileid="14" duration="100"/>
+    <frame tileid="15" duration="100"/>
+   </animation>
+  </tile>
+ </tileset>
+ <tileset firstgid="427" name="Pressure_Plate_01" tilewidth="22" tileheight="22" tilecount="2" columns="2">
+  <image source="../Textures/WorldObjects/Pressure_Plate_01.png" width="44" height="22"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="20" height="15">
+  <data encoding="csv">
+50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,
+50,127,128,129,50,50,127,128,129,50,50,127,128,128,128,128,128,128,129,50,
+50,137,60,139,50,50,137,60,139,50,50,147,60,60,60,60,60,60,139,50,
+50,137,60,60,129,127,60,60,60,129,50,127,60,60,60,60,60,60,139,50,
+50,137,60,60,60,60,60,60,60,60,128,60,60,60,60,60,60,60,139,50,
+50,137,60,60,60,60,60,60,60,148,148,148,148,148,148,148,148,148,149,50,
+50,137,60,60,60,60,60,60,139,50,50,50,50,50,50,50,50,50,50,50,
+50,137,60,60,60,60,60,60,139,50,127,128,128,129,50,127,128,128,129,50,
+50,147,148,148,60,60,148,148,149,50,137,60,60,139,50,137,60,60,139,50,
+50,50,50,50,137,60,50,50,50,50,137,60,60,60,128,60,60,60,139,50,
+125,125,126,50,137,60,128,128,128,128,60,60,60,60,60,60,60,60,139,50,
+60,60,136,50,137,60,60,60,60,60,60,60,60,60,60,60,60,60,139,50,
+60,60,136,50,137,60,60,60,60,149,147,60,60,60,60,60,60,60,139,50,
+60,60,136,50,147,148,148,148,148,50,50,147,148,148,148,148,148,148,149,50,
+60,60,136,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50
+</data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="12" name="FloorLever" type="Object" gid="181" x="140" y="160" width="21" height="21">
+   <properties>
+    <property name="scriptPath" value="Assets/Scripts/Items.lua"/>
+    <property name="scriptTable" value="FloorLever"/>
+   </properties>
+  </object>
+  <object id="22" name="Load_Trigger" type="Object" gid="184" x="35" y="90" width="30" height="60">
+   <properties>
+    <property name="destinationCellId" value="Green_01_01"/>
+    <property name="destinationTriggerId" type="int" value="3"/>
+    <property name="scriptPath" value="Assets/Scripts/Items.lua"/>
+    <property name="scriptTable" value="CellLoadTrigger"/>
+   </properties>
+  </object>
+  <object id="24" name="guard" type="Object" gid="185" x="40" y="160" width="31" height="46">
+   <properties>
+    <property name="scriptPath" value="Assets/Scripts/Characters.lua"/>
+    <property name="scriptTable" value="guard"/>
+   </properties>
+  </object>
+  <object id="27" name="FloorLever" type="Object" gid="181" x="140" y="230" width="21" height="21">
+   <properties>
+    <property name="scriptPath" value="Assets/Scripts/Items.lua"/>
+    <property name="scriptTable" value="FloorLever"/>
+   </properties>
+  </object>
+  <object id="28" name="Trigger" type="Object" x="85" y="125" width="40" height="80">
+   <properties>
+    <property name="scriptPath" value="Assets/Scripts/Items.lua"/>
+    <property name="scriptTable" value="Trigger"/>
+   </properties>
+  </object>
+  <object id="31" name="Jug" type="Object" gid="186" x="340" y="180" width="20" height="20">
+   <properties>
+    <property name="scriptPath" value="Assets/Scripts/Items.lua"/>
+    <property name="scriptTable" value="Jug"/>
+   </properties>
+  </object>
+  <object id="35" name="Gate" type="Object" gid="183" x="90" y="210" width="30" height="45">
+   <properties>
+    <property name="observeFileID" type="int" value="12"/>
+    <property name="observeID" value="12,27,36"/>
+    <property name="scriptPath" value="Assets/Scripts/Items.lua"/>
+    <property name="scriptTable" value="Gate"/>
+   </properties>
+  </object>
+  <object id="36" name="PressurePlate" type="Object" gid="427" x="140" y="120" width="22" height="22">
+   <properties>
+    <property name="scriptPath" value="Assets/Scripts/Items.lua"/>
+    <property name="scriptTable" value="PressurePlate"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
